@@ -1,0 +1,209 @@
+https://wiki.eng.vmware.com/EVORACK/GIT_FAQ
+
+Updates to existing review:
+----------------------------
+git add <filename with full path>
+git commit --amend
+git log [get the changeset number of your code commit]
+post-review -r <review-number-from-reviewboard> <new changeset number from git log>
+git fetch origin
+git rebase origin/development
+git push
+
+
+first you should do
+
+git reset HEAD^
+
+this will remove the local commit and still keep your changes
+After that do
+
+git stash
+git pull
+git stash apply
+
+and then you know what to do
+
+git add .
+git commit .
+
+git rebase origin/development
+git push origin dev
+
+
+then try git
+
+
+% git log origin/test-branch
+% git show 1a3dc8f
+% git stash list
+% git stash clear
+
+TO get all the change list of branch vcf212
+
+#git checkout master
+#git log HEAD..vcf212
+
+
+git log --oneline <first_commit_id_from_tag>...<last_commit>
+
+git log --no-merges --first-parent remotes/origin/vcf212  --oneline
+
+Checkout a git branch
+#git checkout <branch>
+
+-bash-4.1$ git show create_vcfr0tovcf212
+commit 4988d04f62b01ebf939dd8402f586273c15437f5
+
+
+Find branches the commit is on
+#git branch --contains <commit>
+
+show the diff of what is in branchA that is not in branchB
+git diff branchB...branchA
+
+
+Create new branch and checkout
+#git checkout -b <new_branch>
+
+
+Branch Origin
+#git branch -vv
+
+Git reference  (this will show even the discarded commits)
+#git log -g
+
+
+Discarding Last commit
+git reset Head~
+
+
+Discarding last 3 commits
+git reset HEAD~3
+
+
+Amend to a previous commit
+git commit --amend
+
+
+Undo a commit
+git revert <commit-id>
+
+
+Git Rebasing multiple commits in to one
+
+git rebase -i HEAD~n
+
+Leave the first one marked pick and mark the remaining ones as squash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To remove or unstage your commit
+---------------------------------
+
+Before
+$ git log --oneline --author="sreedhars"
+c5493d0   Spec file changes for repo evorack-imaging to run on vcf213
+
+
+
+$ git reset HEAD^
+Unstaged changes after reset:
+
+
+
+M	support/gobuild/specs/evorackva_sles.py
+
+After
+$ git log --oneline --author="sreedhars"
+$
+
+git reset HEAD^
+
+this will remove the local commit and still keep your changes
+
+After that do
+
+
+git stash
+
+
+git pull
+
+
+git stash apply
+
+
+and then you know what to do
+
+
+git add .
+
+
+git commit .
+
+
+
+
+
+
+
+https://wiki.emulab.net/wiki/GITWorkflow
+
+1) To check the detailed changes you have made :-
+git log --stat
+
+
+2) To reset to previous commit
+git reset HEAD~
+
+3) Discard changes for a certain file
+(use "git checkout -- <file>..." to discard changes in working directory)
+-bash-4.1$ git checkout -- support/gobuild/specs/evorackva_sles.py
+-bash-4.1$ git status
+
+
+$ git config --global user.name "Your Name Comes Here"
+$ git config --global user.email you@yourdomain.example.com
+
+git clone https://github.com/home/sriram/project myrepo
+
+$ cd myrepo
+$ git init
+
+$git branch experimental  (Creates a new branch experimental)
+$git branch (Lists branch)
+
+
+
+$ git add .
+$ git diff --cached
+
+$ git status
+
+
+$git commit
+
+$git log --oneline
+
+$git checkout master
+
+
+$git show c82a22c39c  (to see the actual change)
+
+
+https://git-scm.com/docs/gittutorial
+http://gitready.com/
+http://think-like-a-git.net/
