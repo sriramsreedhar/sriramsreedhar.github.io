@@ -31,10 +31,11 @@ Docker commands
 
 <p>#docker logs 8eb386c5dd7d <b> { docker logs container_id will display the commands run in the container}</b> </p>
 
-<p>#docker history centos:latest <b> {docker history image:tag list details of image creation date, applications added to it}</b> </p>
+<p>#docker history centos:latest <b> {docker history image:tag list details of image layers, i.e creation date, applications added to it etc.}</b> </p>
 
-<p> <b> </b> </p>
-<p> <b> </b> </p>
+<p>#docker run -it centos:latest  bash <b> {runs a container in bash, by default it runs in bash, so you can exclude bash syntax}</b> </p>
+
+<p>#docker commit 8eb386c5dd7d centos/sriram:new  <b> {This will save container changes to docker Image in the repository:tag format}</b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
