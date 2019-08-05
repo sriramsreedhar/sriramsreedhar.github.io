@@ -25,11 +25,14 @@ Docker commands
 
 <p>#docker run -d centos:latest sleep 100      <b>{Runs container in detached mode}</b></p>
 
-<p>#docker inspect 8eb386c5dd7d <b> {docker inspect container_id will display details like IP address, hostname and all details of container </b> </p>
+<p>#docker inspect 8eb386c5dd7d <b> {docker inspect container_id will display details like IP address, hostname and all details of container }</b> </p>
 
 <p>#docker run -it -p 8888:8080 tomcat:8.0 <b> {Maps from containers 8080 port to local desktop port 8888}</b> </p>
+
 <p>#docker logs 8eb386c5dd7d <b> { docker logs container_id will display the commands run in the container}</b> </p>
-<p> <b> </b> </p>
+
+<p>#docker history centos:latest <b> {docker history image:tag list details of image creation date, applications added to it}</b> </p>
+
 <p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
