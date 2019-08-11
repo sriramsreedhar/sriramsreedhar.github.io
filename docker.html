@@ -38,9 +38,15 @@ Docker commands
 <p>#docker commit 8eb386c5dd7d centos/sriram:new  <b> {This will save container changes to docker Image in the repository:tag format}</b> </p>
 
 <p>#docker build -t sriram/centos:1.0 .  <b> {This builds a new image from file Dockerfile, if you don't mention 1.0, it will write latest to tag }</b> </p>
-<p>Dockerfile syntax - FROM, RUN, CMD, WORKDIR<b> {Dockerfile has the following commands}</b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
+<p>Dockerfile syntax - FROM, RUN, CMD, WORKDIR<b> {Dockerfile has the following basic commands to start with}</b> </p>
+
+<p>#docker stats  <b> Shows CPU and Mem usage of all or a particular container, if you pass container_id </b> </p>
+
+<p>To Push Docker Images To Docker HUB <b> Create a Tag, Login to Docker hub, Push Image  </b> </p>
+<p>docker tag 3a685deeb240 sriramsreedhar/centos7.6:1.0 <b>To tag a image, #docker tag image_id(3a685deeb240) docker_hub_repo_name(sriramsreedhar/centos7.6):any_tag_name(1.0) </b> </p>
+<p>#docker login --username=sriramsreedhar<b> Login to docker hub to push the Image</b></p> 
+<p>#docker push sriramsreedhar/centos7.6:1.0<b> #docker push docker_hub_repo_name:new_tag_created_above</b> </p>
+
 <p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
