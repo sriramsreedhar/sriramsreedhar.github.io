@@ -59,8 +59,17 @@ Docker commands
 <p>#docker network ls<b> To list docker network</b> </p>
 <p>#docker network prune<b>To remove all unused networks </b> </p>
 <p>#docker volume rm volume_name1 vol_name2 <b>To remove volumes from docker </b> </p>
-<p>#docker image rm 1e1148e4cc2c 1e1148e4cc2b 1e1148e4cc2e  <b>Remove multiple docker images </b> </p>
+<p>#docker image rm 1e1148e4cc2c 1e1148e4cc2b 1e1148e4cc2e  <b>Remove multiple docker Images </b> </p>
 
+<p>docker rmi <repo:tag> <b> When you get image has dependent child images use this command</b> </p>
+<p>docker rename goofy_keller python_app <b> Rename docker container </b> </p>
+<p> <b>  Create a Docker container links  - Run a container, Link a container to image, login to both containers and ping each other</b> </p>
+<p> docker run -d --name redis  redis:latest (this for latest)<b>Run a  Redis container </b> </p>
+<p> docker run -d   --link container_name image_repo:tag <b> Link the above container to an image and start a container</b> </p>
+<p> <b> </b> </p>
+<p> <b> </b> </p>
+<p> <b> </b> </p>
+<p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
