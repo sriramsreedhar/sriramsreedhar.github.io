@@ -75,15 +75,15 @@ Docker commands
 <p> #docker-compose logs  -f <b> Appends logs  of yaml managed containers, when the log grows </b> </p>
 <p> #docker-compose stop <b> Stops all yaml managed containers </b> </p>
 <p> #docker-compose rm<b> Removes all yaml managed containers </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
+<p>  <b>Docker Networking examples </b> </p>
+<p> #docker run -d --net  none busybox sleep 1000<b> Start docker container in non-networking mode(--net none).</b> </p>
+<p> #docker network ls <b> List the networking interfaces for docker</b> </p>
+<p> #docker network inspect my_bridge_network<b>To know the details of a network </b> </p>
+<p> #docker network create --driver bridge srirams_network<b> Create a new Bridge network, each bridge network is isolated from each other</b> </p>
+<p> #docker run -d --name container_2 --net srirams_network busybox sleep 1000<b> Use the new brige network created above</b> </p>
+<p> #docker network connect sriram2_network container_3 <b> Connect to a additional bridge network, apart from the regular network</b> </p>
+<p> #docker network disconnect sriram2_network container_3 <b>To disconnect from a bridge network </b> </p>
+<p> #docker run -d --name container_4 --net host busybox sleep 1000<b>Host only network is least secure and access to all networks of containers.</b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
 <p> <b> </b> </p>
