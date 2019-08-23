@@ -84,12 +84,13 @@ Docker commands
 <p> #docker network connect sriram2_network container_3 <b> Connect to a additional bridge network, apart from the regular network</b> </p>
 <p> #docker network disconnect sriram2_network container_3 <b>To disconnect from a bridge network </b> </p>
 <p> #docker run -d --name container_4 --net host busybox sleep 1000 <b>Host only network is least secure and access to all networks of containers.</b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
-<p> <b> </b> </p>
+<p> <b> Types of Docker Network </b> </p>
+<p> Bridge Network<b> This has access to out side world and containers in the bridge have access to each other</b> </p>
+<p> None network<b> This has only loop back address to it and is not accessible to outside world </b> </p>
+<p> Host Network<b> This network has access to all network accessed by host</b> </p>
+<p> Overlay Network <b> Used by Swarm service this network can be accessed by different docker hosts</b> </p>
+<p> <b>Docker Swarm</b> </p>
+<p> <b>Prerequisite - needs Virtualbox driver that is part of virtualbox installation to create managers and hosts from docker-machine </b> </p>
 
 
  </table>
