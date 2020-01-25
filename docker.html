@@ -22,7 +22,13 @@ Docker commands
 
 <p>#docker ps -a     <b>{shows all previous run comtainers which has now exited}</b></p>
 
-<p>#docker run --rm -ti centos:latest   <b>{Deltes container after exit} </b></p>
+<p>#docker run --rm -ti centos:latest   <b>{Deletes container after exit} </b></p>
+		
+<p>#docker rmi $(docker images -a -q)  <b>{Removes all images} </b></p>
+		
+<p>#docker ps -a -f status=exited <b>{Lists all containers that has exit status(stopped)} </b></p>
+		
+<p>#docker rm $(docker ps -a -f status=exited -q) <b>{Remove all containers that has been stopped} </b></p>
 
 <p>#docker run --name  hello_sriram centos:latest   <b>{Docker ps -a will allow you to identify this docker container by name}</b> </p>
 
