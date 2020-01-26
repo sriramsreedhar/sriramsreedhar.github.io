@@ -23,6 +23,8 @@ Docker commands
 <p>#docker ps -a     <b>{shows all previous run comtainers which has now exited}</b></p>
 
 <p>#docker run --rm -ti centos:latest   <b>{Deletes container after exit} </b></p>
+		 
+<p>#docker run -it -p 8080:8080 -p 80:80 400c7388c1b2   <b>{Mapping Multiple ports from container to localhost} </b></p>
 		
 <p>#docker rmi $(docker images -a -q)  <b>{Removes all images} </b></p>
 		
