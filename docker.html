@@ -46,6 +46,8 @@ Docker commands
 
 <p>#docker run -it -p 8888:8080 tomcat:8.0 <b> {Maps from containers 8080 port to local desktop port 8888}</b> </p>
 
+<p>#docker-machine create --driver amazonec2 --amazonec2-access-key AKI******* --amazonec2-secret-key 8T93C*******  aws-sandbox<b> { docker on Amazon Ec2}</b> </p>
+		
 <p>#docker logs 8eb386c5dd7d <b> { docker logs container_id will display the commands run in the container}</b> </p>
 
 <p>#docker history centos:latest <b> {docker history image:tag list details of image layers, i.e creation date, applications added to it etc.}</b> </p>
