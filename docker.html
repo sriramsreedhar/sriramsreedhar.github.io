@@ -118,8 +118,7 @@ Docker commands
 <p> $docker push sriramsreedhar/centos7:feb212020 <b> Push Image to Docker Hub </b> </p>
 <p> $ docker run -ti -d --privileged --name=centos7 -p 2222:22 -p 8080:8080 -p 80:80 -p 3306:3306 -p 6379:6379  -v /sys/fs/cgroup:/sys/fs/cgroup:ro -v /Users/sriram:/opt centos:latest
 <p><b> Run docker container in background with systemctl priviledge and forwarding ports to localhost </b></p>
-
-		
+<p> $ docker container exec -it centos7 /bin/bash <b> Login to the running container </b> </p>	
 		
 
  </table>
