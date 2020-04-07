@@ -116,6 +116,9 @@ Docker commands
 <p> $docker login <b> Authenticate to docker Hub to we can push upstream </b> </p>
 <p> $docker tag 20962dcacaa6 sriramsreedhar/centos7:feb212020 <b> Tags image id with user/repos:tag </b> </p>
 <p> $docker push sriramsreedhar/centos7:feb212020 <b> Push Image to Docker Hub </b> </p>
+<p> $docker run --privileged --name centos7-sriram -p 80:80 -p 8080:8080 -p 3306:3306 -p 22222:22  -v /sys/fs/cgroup:/sys/fs/cgroup:ro -d sriram:image  bash
+<p><b> Run docker container in background with systemctl priviledge and forwarding ports to localhost </b></p>
+
 		
 		
 
